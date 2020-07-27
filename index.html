@@ -4,41 +4,227 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <style>
 
-        #top {
-            border: 1px solid black;
+        body { background-color: black; }
+        h2, h3, h4, h5 { color: #F1F1E2; padding: 20px 0; }
+        #sidebar {
+            width: 120px;
+            height: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            background-color: #222;
         }
+        #sidebar img { width: 100%; }
+        #sidebar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 12px 24px;
+            line-height: 1.5;
+            text-decoration: none;
+        }
+        #sidebar a:hover {
+            background-color: black;
+        }
+        .black { background-color: black; }
+        .black:hover { color: black !important; background-color: #ccc !important;}
+        #sidebar a i { font-size: 32px; }
+        #main {
+            padding: 12px 24px;
+            margin-left: 120px;
+            max-width: 980px;
+        }
+        .section { margin-bottom: 70px; }
+        #home {
+            padding: 32px 16px;
+            text-align: center;
+            line-height: 1.5;
+            color: white;
+        }
+        #home h1 { font-size: 5em; }
+        #home p { margin: 20px 0; font-size: 1.1em; }
+        hr { width: 200px; opacity: .6; margin: 20px 0; }
+        .white { background-color: #fff; }
+        .grey { background-color: #555; height: 30px; margin-bottom: 15px; }
+        .subject { margin-top: 20px; color: #888; }
+        .education, .project {
+            width: 49.99%;
+            float: left;
+            padding: 0 8px;
+            margin-bottom: 30px;
+        }
+        .education ul {
+            background-color: white;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            opacity: .6;
+        }
+        .education ul:hover {
+            opacity: 1;
+        }
+        .education ul li:first-child {
+            background-color: #616161;
+            padding: 32px 16px;
+            color: white;
+        }
+        .education ul li {
+            padding: 16px;
+            border-bottom: 1px solid #DDD;
+        }
+        .education ul li:last-child {
+            padding: 24px 16px;
+        }
+        .education ul li span { font-size: 18px; }
+        .education ul li p { margin: 0; font-size: 12px;}
+        .project img { width: 100%; margin-bottom: 12px; vertical-align: middle; }
+
 
     </style>
 </head>
 <body>
     
-    <header id="top">
-        <h1>포트폴리오</h1>
-        <nav id="menu">
-            <span>About</span>
-            <span>Skill</span>
-            <span>Project</span>
-            <span>Education</span>
-            <span>Contact</span>
-        </nav>
-    </header>
-    <section class="about_section section">
+    <nav id="sidebar">
+        <img src="images/picture.jpg">
+        <a href="#" class="black">
+            <i class="glyphicon glyphicon-home"></i>
+            <p>HOME</p>
+        </a>
+        <a href="#about">
+            <i class="glyphicon glyphicon-user"></i>
+            <p>ABOUT</p>
+        </a>
+        <a href="#project">
+            <i class="glyphicon glyphicon-eye-open"></i>
+            <p>PROJECT</p>
+        </a>
+        <a href="#contact">
+            <i class="glyphicon glyphicon-envelope"></i>
+            <p>CONTACT</p>
+        </a>
+    </nav>
 
-    </section>
-    <section class="skills_section section">
 
-    </section>
-    <section class="project_section section">
+    <div id="main">
+        <!-- Header/Home -->
+        <section class="home_section section" id="home">
+            <h1>I'm John Doe.</h1>
+            <p>Photographer and Web Designer.</p>
+            <img src="images/picture.jpg">
+        </section>
 
-    </section>
-    <section class="education_section section">
+        <!-- About Section -->
+        <section class="about_section section" id="about">
+            <!-- About Me -->
+            <h2>About Me</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem commodi deleniti sint animi ullam, numquam in illum, eius excepturi cupiditate adipisci asperiores? Culpa non saepe veritatis mollitia quam asperiores ipsum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem commodi deleniti sint animi ullam, numquam in illum, eius excepturi cupiditate adipisci asperiores? Culpa non saepe veritatis mollitia quam asperiores ipsum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem commodi deleniti sint animi ullam, numquam in illum, eius excepturi cupiditate adipisci asperiores? Culpa non saepe veritatis mollitia quam asperiores ipsum.</p>
 
-    </section>
-    <section class="contact_section section">
+            <!-- My Skills -->
+            <h3>My Skills</h3>
+            <p class="subject">Java</p>
+            <div class="white">
+                <div class="grey" style="width: 85%;"></div>
+            </div>
+            <p class="subject">Database</p>
+            <div class="white">
+                <div class="grey" style="width: 75%;"></div>
+            </div>
+            <p class="subject">Front-end</p>
+            <div class="white">
+                <div class="grey" style="width: 80%;"></div>
+            </div>
+            <p class="subject">Back-end</p>
+            <div class="white">
+                <div class="grey" style="width: 85%;"></div>
+            </div>
 
-    </section>
+            <!-- Education -->
+            <h3>Education</h3>
+            <div>
+                <div class="education">
+                    <ul>
+                        <li>
+                            <span>순천대학교</span>
+                            <p>(정보통신공학과)</p>
+                        </li>
+                        <li>객체지향프로그래밍</li>
+                        <li>모바일 인터넷프로그래밍</li>
+                        <li>자료구조 및 알고리즘</li>
+                        <li>데이터베이스</li>
+                        <li>컴퓨터 네트워크</li>
+                        <li>종합설계프로젝트</li>
+                        <li>
+                            <span>2014.03.03 ~ 2020.02.25</span>
+                            <p>졸업</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="education">
+                    <ul>
+                        <li>
+                            <span>쌍용교육센터</span>
+                            <p>(Java기반 멀티 플랫폼 응용 SW개발자 양성 과정)</p>
+                        </li>
+                        <li>정보능력</li>
+                        <li>객체지향 프로그래밍</li>
+                        <li>관계형 데이터베이스</li>
+                        <li>웹 클라이언트 프로그래밍</li>
+                        <li>웹 서버 프로그래밍</li>
+                        <li>실무 프로젝트 통합구현</li>
+                        <li>
+                            <span>2020.04.07 ~ 2020.09.17</span>
+                            <p>수료</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <h3>Experience</h3>
+            <p style="padding-bottom: 30px;">None.</p>
+        </section>
+
+        <!-- Project Section -->
+        <section class="project_section section" id="project">
+            <h2>Project</h2>
+            <hr>
+            <div>
+                <div class="project">
+                    <img src="images/wedding.jpg">
+                    <img src="images/rocks.jpg">
+                    <img src="images/sailboat.jpg">
+                </div>
+
+                <div class="project">
+                    <img src="images/underwater.jpg">
+                    <img src="images/chef.jpg">
+                    <img src="images/wedding.jpg">
+                    <img src="images/p6.jpg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact_section section" id="contact">
+
+        </section>
+    </div>
+
+    <!-- Footer -->
     <footer id="footer">
 
     </footer>
