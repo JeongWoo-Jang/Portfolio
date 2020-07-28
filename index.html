@@ -9,10 +9,15 @@
     <script src="js/jquery-1.12.4.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=677f13babe8d6030c2e568b2a353e2ef"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
 
-        body { background-color: black; }
+        body { background-color: black; font-family: 'Montserrat', sans-serif; color: #757575 }
         h2, h3, h4, h5 { color: #F1F1E2; padding: 20px 0; }
+        h2 { padding-bottom: 0; }
         #sidebar {
             width: 120px;
             height: 100%;
@@ -28,27 +33,48 @@
             display: block;
             color: white;
             text-align: center;
-            padding: 12px 24px;
+            padding: 16px 24px;
             line-height: 1.5;
             text-decoration: none;
         }
         #sidebar a:hover {
             background-color: black;
         }
+        #myNavbar {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            display: none;
+            z-index: 1;
+        }
+        #myNavbar a {
+            color: #F1F1E2;
+            text-align: center;
+            padding: 8px 16px;
+            font-size: 12px;
+            width: 25%;
+            float: left;
+            text-decoration: none;
+            background-color: transparent;
+        }
         .black { background-color: black; }
         .black:hover { color: black !important; background-color: #ccc !important;}
         #sidebar a i { font-size: 32px; }
         #main {
             padding: 12px 24px;
-            margin-left: 120px;
-            max-width: 980px;
+            padding-left: 130px;
+            width: 980px;
+            margin: 0px auto;
+            transition: all .5s ease-out;
         }
-        .section { margin-bottom: 70px; }
+        .section { margin-top: 50px; }
+        .section:last-child { margin-top: 80px; }
         #home {
             padding: 32px 16px;
             text-align: center;
             line-height: 1.5;
             color: white;
+            margin-top: 0;
         }
         #home h1 { font-size: 5em; }
         #home p { margin: 20px 0; font-size: 1.1em; }
@@ -61,6 +87,7 @@
             float: left;
             padding: 0 8px;
             margin-bottom: 30px;
+            transition: all .5s ease-out;
         }
         .education ul {
             background-color: white;
@@ -87,8 +114,25 @@
         }
         .education ul li span { font-size: 18px; }
         .education ul li p { margin: 0; font-size: 12px;}
-        .project img { width: 100%; margin-bottom: 12px; vertical-align: middle; }
-
+        .project_wrap { position: relative; margin-bottom: 12px; }
+        .project img { width: 100%; vertical-align: middle; transition: all .5s ease-out;}
+        .project_txt {
+            position: absolute; top: 50%; left: 50%;
+            text-align: center;
+            font-size: 18px;
+            color: transparent;
+            transform: translate(-50%, -50%);
+        }
+        .contact_section i {
+            color: white;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .fa {
+            font-size: 24px;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
 
     </style>
 </head>
@@ -114,12 +158,20 @@
         </a>
     </nav>
 
+    <div id="myNavbar">
+        <div>
+            <a href="#" class="black">HOME</a>
+            <a href="#about" class="black">ABOUT</a>
+            <a href="#project" class="black">PROJECT</a>
+            <a href="#contact" class="black">CONTACT</a>
+        </div>
+    </div>
 
     <div id="main">
         <!-- Header/Home -->
         <section class="home_section section" id="home">
-            <h1>I'm John Doe.</h1>
-            <p>Photographer and Web Designer.</p>
+            <h1>Hello!</h1>
+            <p>#web developer</p>
             <img src="images/picture.jpg">
         </section>
 
@@ -134,21 +186,29 @@
 
             <!-- My Skills -->
             <h3>My Skills</h3>
-            <p class="subject">Java</p>
-            <div class="white">
-                <div class="grey" style="width: 85%;"></div>
+            <div class="subject_wrap" title="85%">
+                <p class="subject">Java</p>
+                <div class="white">
+                    <div class="grey" style="width: 85%;"></div>
+                </div>
             </div>
-            <p class="subject">Database</p>
-            <div class="white">
-                <div class="grey" style="width: 75%;"></div>
+            <div class="subject_wrap" title="75%">
+                <p class="subject">Database</p>
+                <div class="white">
+                    <div class="grey" style="width: 75%;"></div>
+                </div>
             </div>
-            <p class="subject">Front-end</p>
-            <div class="white">
-                <div class="grey" style="width: 80%;"></div>
+            <div class="subject_wrap" title="80%">
+                <p class="subject">Front-end</p>
+                <div class="white">
+                    <div class="grey" style="width: 80%;"></div>
+                </div>
             </div>
-            <p class="subject">Back-end</p>
-            <div class="white">
-                <div class="grey" style="width: 85%;"></div>
+            <div class="subject_wrap" title="85%">
+                <p class="subject">Back-end</p>
+                <div class="white">
+                    <div class="grey" style="width: 85%;"></div>
+                </div>
             </div>
 
             <!-- Education -->
@@ -170,6 +230,9 @@
                             <span>2014.03.03 ~ 2020.02.25</span>
                             <p>졸업</p>
                         </li>
+                        <li>
+                            <div id="uni" style="width:100%;height:300px;"></div>
+                        </li>
                     </ul>
                 </div>
 
@@ -189,6 +252,9 @@
                             <span>2020.04.07 ~ 2020.09.17</span>
                             <p>수료</p>
                         </li>
+                        <li>
+                            <div id="center" style="width:100%;height:300px;"></div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -204,30 +270,219 @@
             <hr>
             <div>
                 <div class="project">
-                    <img src="images/wedding.jpg">
-                    <img src="images/rocks.jpg">
-                    <img src="images/sailboat.jpg">
+                    <div class="project_wrap">
+                        <div class="project_img"><img src="images/wedding.jpg" value="console_project"></div>
+                        <div class="project_txt">
+                            <p>Java<br>Console Project</p>
+                        </div>
+                    </div>
+                    <div class="project_wrap">
+                        <div class="project_img"><img src="images/rocks.jpg" value="educationcenter"></div>
+                        <div class="project_txt">
+                            <p>Database<br>Console Project</p>
+                        </div>
+                    </div>
+                    <div class="project_wrap">
+                        <div class="project_img"><img src="images/sailboat.jpg" value=""></div>
+                        <div class="project_txt">
+                            <p>None</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="project">
-                    <img src="images/underwater.jpg">
-                    <img src="images/chef.jpg">
-                    <img src="images/wedding.jpg">
-                    <img src="images/p6.jpg">
+                    <div class="project_wrap">
+                        <div class="project_img"><img src="images/underwater.jpg" value=""></div>
+                        <div class="project_txt">
+                            <p>Semi<br>Ssangsinsa</p>
+                        </div>
+                    </div>
+                    <div class="project_wrap">
+                        <div class="project_img"><img src="images/chef.jpg" value=""></div>
+                        <div class="project_txt">
+                            <p>Web + Server</p>
+                        </div>
+                    </div>
+                    <div class="project_wrap">
+                        <div class="project_img"><img src="images/wedding.jpg" value=""></div>
+                        <div class="project_txt">
+                            <p>Spring</p>
+                        </div>
+                    </div>
+                    <div class="project_wrap">
+                        <div class="project_img"><img src="images/p6.jpg" value=""></div>
+                        <div class="project_txt">
+                            <p>None</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div style="clear: both"></div>
         </section>
 
         <!-- Contact Section -->
         <section class="contact_section section" id="contact">
-
+            <h2>Contact</h2>
+            <hr>
+            <div>
+                <p>
+                    <i class="glyphicon glyphicon-map-marker"></i>
+                    Seoul, South Korea
+                </p>
+                <p>
+                    <i class="glyphicon glyphicon-earphone"></i>
+                    Phone : 010-4820-3060
+                </p>
+                <p>
+                    <i class="glyphicon glyphicon-envelope"></i>
+                    Email : jwoo0823@naver.com
+                </p>
+            </div>
         </section>
+
+        <!-- Footer Section -->
+        <section class="footer_section section" id="footer">
+            <i class="fa fa-facebook-official"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-github"></i>
+            <p>&copy; Copyright 2020 All rights reserved</p>
+        </footer>
     </div>
 
-    <!-- Footer -->
-    <footer id="footer">
 
-    </footer>
+
+
+    <script>
+
+        $(function() {
+            $(".subject_wrap").tooltip();
+        });
+
+        $(".subject_wrap").mouseover(function() {
+            $(this).css("cursor", "default");
+            $(this).children("p").css("color", "white");
+            $(this).children("div").children().css("background-color", "#888");
+        });
+        $(".subject_wrap").mouseout(function() {
+            $(this).children("p").css("color", "#888");
+            $(this).children("div").children().css("background-color", "#555");
+        });
+
+        $(document).ready(function() {
+            $("[data-toggle='tooltip']").tooltip();
+        });
+
+
+        $(".project_wrap").mouseover(function() {
+            $(this).css("cursor", "pointer");
+            $(this).children().children("img").css("opacity", ".3");
+            $(this).children().children("p").css("color", "white").css("transition", "all .5s ease-in");
+        });
+        $(".project_wrap").mouseout(function() {
+            $(this).css("cursor", "");
+            $(this).children().children("img").css("opacity", "1");
+            $(this).children().children("p").css("color", "transparent");
+        });
+
+        $(".project_wrap").click(function() {
+            if ($(this).children().children("img").attr("value") !== "") {
+                location.href = "https://github.com/JeongWoo-Jang/" + $(this).children().children("img").attr("value");
+            }
+        });
+
+        $(".fa").mouseover(function() {
+            $(this).css("cursor", "pointer");
+            $(this).css("color", "white");
+        });
+        $(".fa").mouseout(function() {
+            $(this).css("cursor", "");
+            $(this).css("color", "#757575");
+        });
+
+        $(".fa-facebook-official").click(function() {
+            location.href = "https://www.facebook.com/jeongwoo.jang.988/";
+        });
+
+        $(".fa-instagram").click(function() {
+            location.href = "https://www.instagram.com/jeong_woo_823/";
+        });
+
+        $(".fa-github").click(function() {
+            location.href = "https://github.com/JeongWoo-Jang";
+        });
+
+
+        //학교 지도
+        var container = document.getElementById('uni');
+        var options = {
+            center: new kakao.maps.LatLng(34.969530, 127.480101),
+            level: 3
+        };
+        var map = new kakao.maps.Map(container, options);
+        
+        var markerPosition = new kakao.maps.LatLng(34.969530, 127.480101);
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+        marker.setMap(map);
+
+
+        //학원 지도
+        var container = document.getElementById('center'); 
+        var options = {
+            center: new kakao.maps.LatLng(37.499402, 127.033160),
+            level: 3
+        };
+        var map = new kakao.maps.Map(container, options);
+
+        var markerPosition = new kakao.maps.LatLng(37.499402, 127.033160);
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+        marker.setMap(map);
+
+
+        $(document).ready(function() {
+
+            //화면 켰을 때
+            var width = $(window).width();
+            $("#main").css("width", width + "px");
+            $("#main").css("max-width", "980px");
+
+            if ($(window).width() < 600) {
+                $("#sidebar").hide();
+                $("#main").css("padding-left", "24px");
+                $("#myNavbar").show();
+                $(".education, .project").css("width", "100%");
+            } else {
+                $("#sidebar").show();
+                $("#main").css("padding-left", "130px");
+                $("#myNavbar").hide();
+            }
+
+            //화면 크기에 따라 변환
+            $(window).resize(function() {
+                var width = $(window).width();
+                
+                $("#main").css("max-width", "980px");
+                $("#main").css("width", width + "px");
+
+                if ($(window).width() < 600) {
+                    $("#sidebar").hide();
+                    $("#myNavbar").show();
+                    $("#main").css("padding-left", "24px");
+                    $(".education, .project").css("width", "100%");
+                } else {
+                    $("#sidebar").show();
+                    $("#myNavbar").hide();
+                    $("#main").css("padding-left", "130px");
+                    $(".education, .project").css("width", "49.99%");
+                }
+
+            });
+        });
+
+    </script>
 
 </body>
 </html>
