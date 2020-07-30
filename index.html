@@ -36,6 +36,7 @@
             padding: 16px 24px;
             line-height: 1.5;
             text-decoration: none;
+            transition: all 1s linear;
         }
         #sidebar a:hover {
             background-color: black;
@@ -148,75 +149,13 @@
             margin-bottom: 10px;
         }
 
-        .modal-wrapper {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: rgba(41, 171, 164, 0.8);
-            visibility: hidden;
-            opacity: 0;
-            transition: all 0.25s ease-in-out;
-        }
-        .modal-wrapper.open {
-            opacity: 1;
-            visibility: visible;
-        }
-        .modal {
-            width: 600px;
-            height: 400px;
-            display: block;
-            margin: 50% 0 0 -300px;
-            position: relative;
-            top: 50%; 
-            left: 50%;
-            background: #fff;
-            opacity: 0;
-            transition: all 0.5s ease-in-out;
-        }
-        .modal-wrapper.open .modal {
-            margin-top: -200px;
-            opacity: 1;
-        }
-
-        .head { 
-            width: 90%;
-            height: 32px;
-            padding: 12px 30px;
-            overflow: hidden;
-            background: #e2525c;
-        }
-
-        .btn-close {
-            font-size: 28px;
-            display: block;
-            float: right;
-            color: #fff;
-        }
-
-        .content {
-            padding: 10%;
-        }
-
-        .good-job {
-            text-align: center;
-            color: #e2525c;
-        }
-        .good-job .fa-thumbs-o-up {
-            font-size: 60px;
-        }
-        .good-job h1 {
-            font-size: 45px;
-        }
-
     </style>
 </head>
 <body>
     
     <nav id="sidebar">
         <img src="images/picture.jpg">
-        <a href="#" class="black">
+        <a href="#main" class="black">
             <i class="glyphicon glyphicon-home"></i>
             <p>HOME</p>
         </a>
@@ -240,7 +179,7 @@
 
     <div id="myNavbar">
         <div>
-            <a href="#" class="black">HOME</a>
+            <a href="#main" class="black">HOME</a>
             <a href="#about" class="black">ABOUT</a>
             <a href="#project" class="black">PROJECT</a>
             <a href="#contact" class="black">CONTACT</a>
@@ -581,6 +520,21 @@
             $("#main").css("padding-left", "130px");
             hidden = false;
             $("#burger").css("display", "none");
+        });
+
+
+        $(document).on("click", "#sidebar a, #myNavbar a", function(event) {
+            if ($(this).attr("id") != "hide") {
+                var targetHash = $(this).attr('href');
+                event.preventDefault();
+                $("html, body").animate({
+                    opacity: .2
+                }, 600).animate({
+                    scrollTop : $(targetHash).offset().top
+                }, 10).animate({
+                    opacity: 1
+                }, 600)
+            }
         });
 
     </script>
