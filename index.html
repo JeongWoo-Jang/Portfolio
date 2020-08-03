@@ -130,7 +130,13 @@
         .education ul li span { font-size: 18px; }
         .education ul li p { margin: 0; font-size: 12px;}
         .project_wrap { position: relative; margin-bottom: 12px; }
-        .project img { width: 100%; vertical-align: middle; transition: all .5s ease-out;}
+        .project img {
+            width: 100%;
+            vertical-align: middle;
+            transition: all .5s ease-out;
+            -webkit-filter: grayscale(0%);
+            filter: none;
+        }
         .project_txt {
             position: absolute; top: 50%; left: 50%;
             text-align: center;
@@ -296,19 +302,19 @@
             <div>
                 <div class="project">
                     <div class="project_wrap">
-                        <div class="project_img"><img src="images/wedding.jpg" value="console_project"></div>
+                        <div class="project_img"><img src="images/pj01.png" value="console_project"></div>
                         <div class="project_txt">
                             <p>Java<br>Console Project</p>
                         </div>
                     </div>
                     <div class="project_wrap">
-                        <div class="project_img"><img src="images/rocks.jpg" value="educationcenter"></div>
+                        <div class="project_img"><img src="images/pj02.png" value="educationcenter"></div>
                         <div class="project_txt">
-                            <p>Database<br>Console Project</p>
+                            <p>Semi<br>Ssangsinsa Store</p>
                         </div>
                     </div>
                     <div class="project_wrap">
-                        <div class="project_img"><img src="images/sailboat.jpg" value=""></div>
+                        <div class="project_img"><img src="images/pj03.png" value=""></div>
                         <div class="project_txt">
                             <p>None</p>
                         </div>
@@ -317,25 +323,25 @@
 
                 <div class="project">
                     <div class="project_wrap">
-                        <div class="project_img"><img src="images/underwater.jpg" value=""></div>
+                        <div class="project_img"><img src="images/pj04.png" value=""></div>
                         <div class="project_txt">
-                            <p>Semi<br>Ssangsinsa</p>
+                            <p>Database<br>Management System</p>
                         </div>
                     </div>
                     <div class="project_wrap">
-                        <div class="project_img"><img src="images/chef.jpg" value=""></div>
+                        <div class="project_img"><img src="images/pj08.png" value=""></div>
                         <div class="project_txt">
-                            <p>Web + Server</p>
+                            <p>Web + Server<br>At-Ticket</p>
                         </div>
                     </div>
                     <div class="project_wrap">
-                        <div class="project_img"><img src="images/wedding.jpg" value=""></div>
+                        <div class="project_img"><img src="images/pj06.png" value=""></div>
                         <div class="project_txt">
                             <p>Spring</p>
                         </div>
                     </div>
                     <div class="project_wrap">
-                        <div class="project_img"><img src="images/p6.jpg" value=""></div>
+                        <div class="project_img"><img src="images/pj05.png" value=""></div>
                         <div class="project_txt">
                             <p>None</p>
                         </div>
@@ -380,9 +386,6 @@
         $(function() {
             $(".subject_wrap").tooltip();
         });
-        $(document).ready(function() {
-            $("[data-toggle='tooltip']").tooltip();
-        });
 
         $(".subject_wrap").mouseover(function() {
             $(this).css("cursor", "default");
@@ -397,12 +400,16 @@
 
         $(".project_wrap").mouseover(function() {
             $(this).css("cursor", "pointer");
-            $(this).children().children("img").css("opacity", ".3");
+            $(this).children().children("img")
+                .css("opacity", ".3")
+                .css("-webkit-filter", "grayscale(100%)")
             $(this).children().children("p").css("color", "white").css("transition", "all .4s ease-in");
         });
         $(".project_wrap").mouseout(function() {
             $(this).css("cursor", "");
-            $(this).children().children("img").css("opacity", "1");
+            $(this).children().children("img")
+                .css("opacity", "1")
+                .css("-webkit-filter", "grayscale(0%)")
             $(this).children().children("p").css("color", "transparent");
         });
 
@@ -523,19 +530,19 @@
         });
 
 
-        $(document).on("click", "#sidebar a, #myNavbar a", function(event) {
-            if ($(this).attr("id") != "hide") {
-                var targetHash = $(this).attr('href');
-                event.preventDefault();
-                $("html, body").animate({
-                    opacity: .2
-                }, 600).animate({
-                    scrollTop : $(targetHash).offset().top
-                }, 10).animate({
-                    opacity: 1
-                }, 600)
-            }
-        });
+        // $(document).on("click", "#sidebar a, #myNavbar a", function(event) {
+        //     if ($(this).attr("id") != "hide") {
+        //         var targetHash = $(this).attr('href');
+        //         event.preventDefault();
+        //         $("html, body").animate({
+        //             opacity: .2
+        //         }, 600).animate({
+        //             scrollTop : $(targetHash).offset().top
+        //         }, 10).animate({
+        //             opacity: 1
+        //         }, 600)
+        //     }
+        // });
 
     </script>
 
