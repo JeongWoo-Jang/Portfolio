@@ -1,37 +1,74 @@
-## Welcome to GitHub Pages
+# JeongWoo Jang's Portfolio
 
-You can use the [editor on GitHub](https://github.com/JeongWoo-Jang/Portfolio/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+**장정우의 포트폴리오 | [▶ Preview](https://jeongwoo-jang.github.io/Portfolio)** 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![CHANMI KIM's Portfolio](asset/img/readme/portfolio-thumbnail.png "Preview")
 
-### Markdown
+### 👋 Introduction
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<table>
+    <tr>
+        <th>프로젝트명</th>
+        <th>Portfolio</th>
+        <th>개발 기간</th>
+        <th>2019.05.30. ~ 2019.06.14.</th>
+    </tr>
+    <tr>
+        <th>프로젝트 성격</th>
+        <th>토이 프로젝트</th>
+        <th>개발 인원</th>
+        <th>개인 / 1명</th>
+    </tr>
+    <tr>
+        <th>프로젝트 개요</th>
+        <th>싱글페이지 포트폴리오 웹 사이트</th>
+        <th>개발 환경</th>
+        <th>Windows10</th>
+    </tr>
+    <tr>
+        <th colspan="4">사용한 Skill 또는 지식</th>
+    </tr>  
+    <tr>
+        <th>개발언어</th>
+        <th colspan="3">HTML5, JavaScript, CSS3</th>
+    </tr>
+    <tr>
+        <th>형상관리</th>
+        <th colspan="3">Github, Git Bash, Source Tree</th>
+    </tr>
+    <tr>
+        <th>개발도구</th>
+        <th colspan="3">Visual Studio Code, Github Pages, Kakao Oven</th>
+    </tr>
+    <tr>
+        <th>사용기술</th>
+        <th colspan="3">jQuery, Bootstrap, Media Query</th>
+    </tr>
+</table>
 
-```markdown
-Syntax highlighted code block
+### 📷 Appearance
 
-# Header 1
-## Header 2
-### Header 3
+Git Pages와 HTML5, CSS3, JavaScript를 이용한 싱글페이지 포트폴리오 정적 웹 사이트입니다.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JeongWoo-Jang/Portfolio/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<table>
+    <tr>
+        <th>About</th>
+        <th>Experience</th>
+        <th>Project</th>
+    </tr>
+    <tr>
+        <td><img width="266" src="asset/img/readme/portfolio-about.png"></td>
+        <td><img width="266" src="asset/img/readme/portfolio-experiences.png"></td>
+        <td><img width="266" src="asset/img/readme/portfolio-project.png"></td>
+    </tr>
+        <tr>
+        <th>Skills</th>
+        <th>Eduction</th>
+        <th>Contact</th>
+    </tr>
+    <tr>
+        <td><img width="266" src="asset/img/readme/portfolio-skills.png"></td>
+        <td><img width="266" src="asset/img/readme/portfolio-education.png"></td>
+        <td><img width="266" src="asset/img/readme/portfolio-contact.png"></td>
+    </tr>
+</table>
