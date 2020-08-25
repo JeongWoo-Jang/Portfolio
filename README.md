@@ -2,8 +2,6 @@
 
 **장정우의 포트폴리오 | [▶ Preview](https://jeongwoo-jang.github.io/Portfolio)** 
 
-![CHANMI KIM's Portfolio](asset/img/readme/portfolio-thumbnail.png "Preview")
-
 ### 👋 Introduction
 
 <table>
@@ -11,7 +9,7 @@
         <th>프로젝트명</th>
         <th>Portfolio</th>
         <th>개발 기간</th>
-        <th>2019.05.30. ~ 2019.06.14.</th>
+        <th>2020.08.05. ~ 2020.08.08.</th>
     </tr>
     <tr>
         <th>프로젝트 성격</th>
@@ -34,15 +32,15 @@
     </tr>
     <tr>
         <th>형상관리</th>
-        <th colspan="3">Github, Git Bash, Source Tree</th>
+        <th colspan="3">Github, Git Bash</th>
     </tr>
     <tr>
         <th>개발도구</th>
-        <th colspan="3">Visual Studio Code, Github Pages, Kakao Oven</th>
+        <th colspan="3">Visual Studio Code, Github Pages</th>
     </tr>
     <tr>
         <th>사용기술</th>
-        <th colspan="3">jQuery, Bootstrap, Media Query</th>
+        <th colspan="3">jQuery, Bootstrap</th>
     </tr>
 </table>
 
@@ -57,9 +55,9 @@ Git Pages와 HTML5, CSS3, JavaScript를 이용한 싱글페이지 포트폴리�
         <th>Project</th>
     </tr>
     <tr>
-        <td><img width="266" src="asset/img/readme/portfolio-about.png"></td>
-        <td><img width="266" src="asset/img/readme/portfolio-experiences.png"></td>
-        <td><img width="266" src="asset/img/readme/portfolio-project.png"></td>
+        <td><img width="266" src=""></td>
+        <td><img width="266" src=""></td>
+        <td><img width="266" src=""></td>
     </tr>
         <tr>
         <th>Skills</th>
@@ -67,8 +65,8 @@ Git Pages와 HTML5, CSS3, JavaScript를 이용한 싱글페이지 포트폴리�
         <th>Contact</th>
     </tr>
     <tr>
-        <td><img width="266" src="asset/img/readme/portfolio-skills.png"></td>
-        <td><img width="266" src="asset/img/readme/portfolio-education.png"></td>
-        <td><img width="266" src="asset/img/readme/portfolio-contact.png"></td>
+        <td><img width="266" src=""></td>
+        <td><img width="266" src=""></td>
+        <td><img width="266" src=""></td>
     </tr>
 </table>
