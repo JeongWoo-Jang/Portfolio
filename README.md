@@ -55,9 +55,9 @@ Git Pages와 HTML5, CSS3, JavaScript를 이용한 싱글페이지 포트폴리�
         <th>Project</th>
     </tr>
     <tr>
-        <td><img width="266" src="/JeongWoo-Jang/Portfolio/tree/master/images/about.png"></td>
-        <td><img width="266" src="/JeongWoo-Jang/Portfolio/tree/master/images/ex.png"></td>
-        <td><img width="266" src="/JeongWoo-Jang/Portfolio/tree/master/images/pro.png"></td>
+        <td><img width="266" src="/JeongWoo-Jang/Portfolio/blob/master/images/about.png"></td>
+        <td><img width="266" src="/JeongWoo-Jang/Portfolio/blob/master/images/ex.png"></td>
+        <td><img width="266" src="/JeongWoo-Jang/Portfolio/blob/master/images/pro.png"></td>
     </tr>
         <tr>
         <th>Skills</th>
@@ -65,8 +65,8 @@ Git Pages와 HTML5, CSS3, JavaScript를 이용한 싱글페이지 포트폴리�
         <th>Contact</th>
     </tr>
     <tr>
-        <td><img width="266" src="/JeongWoo-Jang/Portfolio/tree/master/images/skills.png"></td>
-        <td><img width="266" src="/JeongWoo-Jang/Portfolio/tree/master/images/edu.png"></td>
-        <td><img width="266" src="/JeongWoo-Jang/Portfolio/tree/master/images/contact.png"></td>
+        <td><img width="266" src="/JeongWoo-Jang/Portfolio/blob/master/images/skills.png"></td>
+        <td><img width="266" src="/JeongWoo-Jang/Portfolio/blob/master/images/edu.png"></td>
+        <td><img width="266" src="/JeongWoo-Jang/Portfolio/blob/master/images/contact.png"></td>
     </tr>
 </table>
