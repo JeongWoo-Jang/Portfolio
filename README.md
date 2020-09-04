@@ -32,7 +32,7 @@
     </tr>
     <tr>
         <th>형상관리</th>
-        <th colspan="3">Github, GitHub Desktop</th>
+        <th colspan="3">Github, Git</th>
     </tr>
     <tr>
         <th>개발도구</th>
