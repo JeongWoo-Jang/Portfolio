@@ -9,7 +9,7 @@
     <script src="js/jquery-1.12.4.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=677f13babe8d6030c2e568b2a353e2ef"></script>
+    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=677f13babe8d6030c2e568b2a353e2ef"></script> -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -459,33 +459,33 @@
 
 
         //학교 지도
-        var container = document.getElementById('uni');
-        var options = {
-            center: new kakao.maps.LatLng(34.969530, 127.480101),
-            level: 3
-        };
-        var map = new kakao.maps.Map(container, options);
+        // var container = document.getElementById('uni');
+        // var options = {
+        //     center: new kakao.maps.LatLng(34.969530, 127.480101),
+        //     level: 3
+        // };
+        // var map = new kakao.maps.Map(container, options);
         
-        var markerPosition = new kakao.maps.LatLng(34.969530, 127.480101);
-        var marker = new kakao.maps.Marker({
-            position: markerPosition
-        });
-        marker.setMap(map);
+        // var markerPosition = new kakao.maps.LatLng(34.969530, 127.480101);
+        // var marker = new kakao.maps.Marker({
+        //     position: markerPosition
+        // });
+        // marker.setMap(map);
 
 
         //학원 지도
-        var container = document.getElementById('center'); 
-        var options = {
-            center: new kakao.maps.LatLng(37.499402, 127.033160),
-            level: 3
-        };
-        var map = new kakao.maps.Map(container, options);
+        // var container = document.getElementById('center'); 
+        // var options = {
+        //     center: new kakao.maps.LatLng(37.499402, 127.033160),
+        //     level: 3
+        // };
+        // var map = new kakao.maps.Map(container, options);
 
-        var markerPosition = new kakao.maps.LatLng(37.499402, 127.033160);
-        var marker = new kakao.maps.Marker({
-            position: markerPosition
-        });
-        marker.setMap(map);
+        // var markerPosition = new kakao.maps.LatLng(37.499402, 127.033160);
+        // var marker = new kakao.maps.Marker({
+        //     position: markerPosition
+        // });
+        // marker.setMap(map);
 
 
         $(document).ready(function() {
